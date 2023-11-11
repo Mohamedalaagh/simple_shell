@@ -135,7 +135,7 @@ char *without_comment(char *input);
 void shell_loop(data_shell *dts);
 
 /* r.c */
-char *read_line(int *i_eof);
+char *read_line(int *ief);
 
 /* s.c */
 char *swap_char(char *input, int bool);
@@ -151,18 +151,18 @@ char *replaced_input(r_var **head, char *input, char *new_input, int nlen);
 char *rep_var(char *input, data_shell *datash);
 
 /* g.c */
-void bring_line(char **lineptr, size_t *n, char *buffer, size_t j);
-ssize_t get_line(char **lineptr, size_t *n, FILE *stream);
+void bring_line(char **lptr, size_t *n, char *buff, size_t i);
+ssize_t get_line(char **lptr, size_t *n, FILE *stm);
 
 /* ee */
 int exec_line(data_shell *dts);
 
-/* c.c */
-int is_cdir(char *path, int *i);
-char *_which(char *cmd, char **_environ);
-int is_executable(data_shell *datash);
-int check_error_cmd(char *dir, data_shell *datash);
-int cmd_exec(data_shell *datash);
+/* cmd.c */
+int is_cdir(char *path, int *k);
+char *_which(char *cmd, char **environment);
+int is_executable(data_shell *datashell);
+int check_error_cmd(char *directory, data_shell *datashell);
+int cmd_exec(data_shell *datashell);
 
 /* e.c */
 char *_getenv(const char *name, char **_environ);
@@ -187,7 +187,7 @@ int cd_shell(data_shell *datash);
 int (*get_builtin(char *cmd))(data_shell *datash);
 
 /* _.c */
-int exit_shell(data_shell *datash);
+int exit_shell(data_shell *dtsh);
 
 /* a.c */
 int get_len(int n);
@@ -211,8 +211,8 @@ char *error_path_126(data_shell *datash);
 /* g.c */
 int get_error(data_shell *datash, int eval);
 
-/* g.c */
-void get_sigint(int sig);
+/* get sig.c */
+void get_sigint(int signt);
 
 /* a.c */
 void aux_help_env(void);
