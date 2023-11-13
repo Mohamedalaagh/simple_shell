@@ -144,11 +144,11 @@ void go_next(sep_list **list_s, line_list **list_l, data_shell *datash);
 int split_commands(data_shell *datash, char *input);
 char **split_line(char *input);
 
-/* r.c */
-void check_env(r_var **h, char *in, data_shell *data);
-int check_vars(r_var **h, char *in, char *st, data_shell *data);
-char *replaced_input(r_var **head, char *input, char *new_input, int nlen);
-char *rep_var(char *input, data_shell *datash);
+/* var_check.c */
+void check_env(r_var **h, char *ind, data_shell *dt);
+int check_vars(r_var **h, char *ind, char *sat, data_shell *dt);
+char *replaced_input(r_var **hd, char *in, char *nein, int nle);
+char *rep_var(char *inpu, data_shell *datash);
 
 /* g.c */
 void bring_line(char **lptr, size_t *n, char *buff, size_t i);
@@ -195,21 +195,21 @@ char *aux_itoa(int n);
 int _atoi(char *s);
 
 /* a1.c */
-char *strcat_cd(data_shell *, char *, char *, char *);
-char *error_get_cd(data_shell *datash);
-char *error_not_found(data_shell *datash);
-char *error_exit_shell(data_shell *datash);
+char *strcat_cd(data_shell *dtsh, char *m, char *er, char *ver_str);
+char *error_get_cd(data_shell *dtsh);
+char *error_not_found(data_shell *dtsh);
+char *error_exit_shell(data_shell *dtsh);
 
 /* a2.c */
 char *error_get_alias(char **args);
-char *error_env(data_shell *datash);
+char *error_env(data_shell *dtsh);
 char *error_syntax(char **args);
 char *error_permission(char **args);
-char *error_path_126(data_shell *datash);
+char *error_path_126(data_shell *dtsh);
 
 
 /* g.c */
-int get_error(data_shell *datash, int eval);
+int get_error(data_shell *dtsh, int ev);
 
 /* get sig.c */
 void get_sigint(int signt);
@@ -226,7 +226,7 @@ void aux_help(void);
 void aux_help_alias(void);
 void aux_help_cd(void);
 
-/* g.c */
-int get_help(data_shell *datash);
+/* get_help.c */
+int get_help(data_shell *datashell);
 
 #endif
