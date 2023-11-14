@@ -123,12 +123,12 @@ int _isdigit(const char *s);
 /* a3.c */
 void rev_string(char *s);
 
-/* c.c */
-int repeated_char(char *input, int i);
-int error_sep_op(char *input, int i, char last);
-int first_char(char *input, int *i);
-void print_syntax_error(data_shell *datash, char *input, int i, int bool);
-int check_syntax_error(data_shell *datash, char *input);
+/* rep.c */
+int repeated_char(char *in, int k);
+int error_sep_op(char *in, int k, char la);
+int first_char(char *in, int *k);
+void print_syntax_error(data_shell *dtsh, char *in, int k, int bool);
+int check_syntax_error(data_shell *dtsh, char *in);
 
 /* s.c */
 char *without_comment(char *input);
@@ -174,14 +174,14 @@ void set_env(char *n, char *val, data_shell *datash);
 int _setenv(data_shell *dtsh);
 int _unsetenv(data_shell *dtsh);
 
-/* c.c */
-void cd_dot(data_shell *datash);
-void cd_to(data_shell *datash);
-void cd_previous(data_shell *datash);
-void cd_to_home(data_shell *datash);
+/* cdot.c */
+void cd_dot(data_shell *dtsh);
+void cd_to(data_shell *dtsh);
+void cd_previous(data_shell *dtsh);
+void cd_to_home(data_shell *dtsh);
 
-/* c.c */
-int cd_shell(data_shell *datash);
+/* cd.c */
+int cd_shell(data_shell *dtsh);
 
 /* gn */
 int (*get_builtin(char *cmd))(data_shell *datash);
