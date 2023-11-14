@@ -138,11 +138,11 @@ void shell_loop(data_shell *dts);
 char *read_line(int *ief);
 
 /* s.c */
-char *swap_char(char *input, int bool);
-void add_nodes(sep_list **head_s, line_list **head_l, char *input);
-void go_next(sep_list **list_s, line_list **list_l, data_shell *datash);
-int split_commands(data_shell *datash, char *input);
-char **split_line(char *input);
+char *swap_char(char *in, int bool);
+void add_nodes(sep_list **hes, line_list **hel, char *in);
+void go_next(sep_list **lis, line_list **lil, data_shell *dtsh);
+int split_commands(data_shell *dtsh, char *in);
+char **split_line(char *in);
 
 /* var_check.c */
 void check_env(r_var **h, char *ind, data_shell *dt);
@@ -184,7 +184,7 @@ void cd_to_home(data_shell *dtsh);
 int cd_shell(data_shell *dtsh);
 
 /* gn */
-int (*get_builtin(char *cmd))(data_shell *datash);
+int (*get_builtin(char *cm))(data_shell *datash);
 
 /* _.c */
 int exit_shell(data_shell *dtsh);
