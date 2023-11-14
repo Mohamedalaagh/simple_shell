@@ -164,15 +164,15 @@ int is_executable(data_shell *datashell);
 int check_error_cmd(char *directory, data_shell *datashell);
 int cmd_exec(data_shell *datashell);
 
-/* e.c */
+/* getinv.c */
 char *_getenv(const char *name, char **_environ);
 int _env(data_shell *datash);
 
-/* e.c */
-char *copy_info(char *name, char *value);
-void set_env(char *name, char *value, data_shell *datash);
-int _setenv(data_shell *datash);
-int _unsetenv(data_shell *datash);
+/* copy_inf.c */
+char *copy_info(char *n, char *val);
+void set_env(char *n, char *val, data_shell *datash);
+int _setenv(data_shell *dtsh);
+int _unsetenv(data_shell *dtsh);
 
 /* c.c */
 void cd_dot(data_shell *datash);
