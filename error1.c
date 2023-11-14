@@ -41,7 +41,7 @@ char *strcat_cd(data_shell *dtsh, char *m, char *er, char *ver_str)
  * @dtsh:
  * Return:
  */
-char *er_get_cd(data_shell *dtsh)
+char *error_get_cd(data_shell *dtsh)
 {
     int ln, len_id;
     char *er, *ver_str, *m;
@@ -79,7 +79,7 @@ char *er_get_cd(data_shell *dtsh)
  * @dtshsh:
  * Return:
  */
-char *er_not_found(data_shell *dtsh)
+char *error_not_found(data_shell *dtsh)
 {
     int ln;
     char *er;
@@ -111,7 +111,7 @@ char *er_not_found(data_shell *dtsh)
  *
  * Return:
  */
-char *er_exit_shell(data_shell *dtsh)
+char *error_exit_shell(data_shell *dtsh)
 {
     int ln;
     char *er;

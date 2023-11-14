@@ -1,11 +1,4 @@
 #include "shell.h"
-
-/**
- * get_error - to get the standerd error
- * @dtsh: 
- * @ev: 
- * Return: 
- */
 int get_error(data_shell *dtsh, int ev)
 {
     char *er;
@@ -38,4 +31,3 @@ int get_error(data_shell *dtsh, int ev)
     dtsh->status = ev;
     return (ev);
 }
-

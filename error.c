@@ -5,7 +5,7 @@
  * @dtsh: 
  * Return: 
  */
-char *er_env(data_shell *dtsh)
+char *error_env(data_shell *dtsh)
 {
     int lg;
     char *er;
@@ -41,7 +41,7 @@ char *er_env(data_shell *dtsh)
  *
  * Return: 
  */
-char *er_path_126(data_shell *dtsh)
+char *error_path_126(data_shell *dtsh)
 {
     int ln;
     char *ver_str;

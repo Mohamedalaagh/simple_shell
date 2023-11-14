@@ -45,7 +45,7 @@ typedef struct data
  * struct sep_list_s 
  * @separator: ; | &
  * @next: 
- * Description: 
+ * Description:*/ 
 typedef struct sep_list_s
 {
 	char separator;
@@ -102,11 +102,11 @@ r_var *add_rvar_node(r_var **hd, int lv, char *v, int lvl);
 void free_rvar_list(r_var **hd);
 
 /* a */
-char *_strcat(char *dest, const char *src);
-char *_strcpy(char *dest, char *src);
-int _strcmp(char *s1, char *s2);
-char *_strchr(char *s, char c);
-int _strspn(char *s, char *accept);
+char *_strcat(char *des, const char *sr);
+char *_strcpy(char *des, char *sr);
+int _strcmp(char *s, char *r);
+char *_strchr(char *ss, char cc);
+int _strspn(char *ss, char *ac);
 
 /* ac */
 void _memcpy(void *nptr, const void *ptr, unsigned int size);
