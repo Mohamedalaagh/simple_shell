@@ -120,8 +120,8 @@ int cmp_chars(char str[], const char *delim);
 char *_strtok(char str[], const char *delim);
 int _isdigit(const char *s);
 
-/* a3.c */
-void rev_string(char *s);
+/* rstring.c */
+void rev_string(char *strin);
 
 /* rep.c */
 int repeated_char(char *in, int k);
@@ -190,9 +190,9 @@ int (*get_builtin(char *cm))(data_shell *datash);
 int exit_shell(data_shell *dtsh);
 
 /* a.c */
-int get_len(int n);
+int get_len(int no);
 char *aux_itoa(int n);
-int _atoi(char *s);
+int _atoi(char *strin);
 
 /* a1.c */
 char *strcat_cd(data_shell *dtsh, char *m, char *er, char *ver_str);
